@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Temperature</title>
+    <title>Temperature Display</title>
 </head>
 
 <body>
@@ -30,13 +30,13 @@
                     break;
                 }
                 else{
-                    alert("Nhập sai");
-                    input=parseFloat(prompt("Nhập lại nhiệt độ",25));
+                    alert("Wrong Input");
+                    input=parseFloat(prompt("Input temperature again",25));
                 }
             }
             return i;
         }
-        let nhietdo=check(parseFloat(prompt("Nhập nhiệt độ",25)));
+        let nhietdo=check(parseFloat(prompt("Input a temperature",25)));
         let doc = new temperature(nhietdo);
         let c = doc.getC();
         let dof = doc.getF();
