@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra nguyên dương</title>
+</head>
+
+<body>
+    <script>
+        function integer(num) {
+            if (num > 0) {
+                return true;
+            }
+            if (num === 0) {
+                return 0;
+            }
+            return false;
+        }
+        function input() {
+            let num = parseInt(prompt("Enter a Integer"));
+            let result = integer(num);
+            if (isNaN(num)) {
+                return "error!!!";
+            }
+            else {
+                return result;
+            }
+        }
+        function main(){
+            let int=input();
+            alert(int);
+        }
+        main();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giai thừa</title>
+</head>
+
+<body>
+  
+    <script>4
+     
+        function abs(num) {
+            num=checkInt(num);
+            let mult = 1;
+            for (let i = num; i > 0; i--) {
+                mult *= i;
+            }
+            return mult;
+        }
+        
+        function checkInt(num) {
+            num = prompt("Enter");
+            if (num.length === 0) {
+                alert("Chưa nhập số");
+                checkInt();
+            }
+            else {
+                for (let i = 0; i < num.length; i++) {
+                    let number = parseInt(num[i]);
+                    if (isNaN(number)) {
+                        alert("Nhập sai");
+                        checkInt();
+                        break;
+                    }
+                }
+                return parseInt(num);
+            }
+        }
+    function main(){
+        let b = abs();
+        document.write(b);
+    }
+    main();
+    </script>
+</body>
+
+</html>
