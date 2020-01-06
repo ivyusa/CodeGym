@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+    
+        let zipcode1 = '03201-2150';
+        console.log(is_usZipCode(zipcode1));
+        let zipcode2 = '7892';
+        console.log(is_usZipCode(zipcode2));
+        let zipcode3 = '93537-8291';
+        console.log(is_usZipCode(zipcode3));
+        let zipcode4 = '534436643';
+        console.log(is_usZipCode1(zipcode4));
+        let zipcode5 = '434343';
+        console.log(is_usZipCode1(zipcode5));
+
+
+        function is_usZipCode(str) {
+            let regexp = new RegExp('^[0-9]{5}(?:-[0-9]{4})?$');
+            return regexp.test(str);
+        }
+
+        function is_usZipCode1(str) {
+            let regexp1 = new RegExp('^\[0-9]{9}$');
+            return regexp1.test(str);
+        }
+    </script>
+</body>
+</html>
